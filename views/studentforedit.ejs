@@ -1,0 +1,42 @@
+<%- include('./base/header.ejs') %>
+  <div class="container">
+    <div class="alert bg-success my-3">
+      <h4 class="text-center" style="color: aliceblue;">Update Student</h4>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col">
+        <form action='/update/student/<%= student._id %>' method="post">
+          <div>
+            <label class="form-label">Roll No
+            <input type="'text" class="form-control" name="rollNo" value="<%= student.rollNo %>"></label>
+          </div>
+          <div>
+            <label class="form-label">First Name
+            <input type="'text" class="form-control" name="firstName" value="<%= student.firstName %>">
+          </label>
+          </div>
+        <div>
+          <label class="form-label">Last Name
+          <input type="'text" class="form-control" name="lastName" value="<%= student.lastName %>"></label>
+        </div>
+        <div>
+          <label class="form-label">Father Name
+          <input type="'text" class="form-control" name="fatherName" value="<%= student.fatherName %>"></label>
+        </div>
+        <div>
+          <label class="form-label">Adhar Card No
+          <input type="'text" class="form-control" name="adharCardNo" value="<%= student.adharCardNo %>"></label>
+        </div>
+        <div>
+          <label class="form-label">Mobile no.
+          <input type="'text" class="form-control" name="mobileNo" value="<%= student.mobileNo %>"></label>
+        </div>
+        <input type="submit" value="Update Student" class="btn btn-warning w-100 my-3">
+        </form>
+      </div>
+    </div>
+  </div>
+  <%- include('./base/footer.ejs') %>
